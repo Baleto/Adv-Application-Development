@@ -40,7 +40,7 @@ while True:
             for item in input_buffer:
                 print(f"- {item}\n") #A formatted string will allow me to insert the variable "item" in the output
         else:
-            print("\nThe input buffer is empty or it has been cleared.\n")
+            print("\nThe input buffer is empty or it has been cleared.\n") #It is preceeded and succeeded by \n which acts as a new line escape sequence
 #Option 4 will end the loop and exit the program
     elif pick == "4":
         print("Program ended.")
