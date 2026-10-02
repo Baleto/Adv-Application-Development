@@ -11,30 +11,30 @@
 # https://www.w3schools.com/python/ref_list_sort.asp
 
 def main():
-    # Store each student's name and calculated average together in a list.
+    #Each student's name and grade is appended to this list
     students = []
-    # Run from the folder containing student_scores_10.txt.
-    # The with statement closes the file after the reading block finishes.
+#The rogram runs from the folder containing the 10 student scores (student_scores.txt)
+#Once the reading block finishes, the with statement closes the file after the reading block finishes.
     with open("student_scores.txt", "r") as score_file:
         for line in score_file:
             slots = line.split()
-            # Ignore empty lines.
+            #The code ignores empty lines.
             if not slots:
                 continue
-            # The first field is the name; the next six fields are scores.
+            #The first field is interpreted by the machine as the name; the next six fields are scores.
             student_name = slots[0]
             score_total = 0
             for score in slots[1:]:
                 score_total += int(score)
 
-            # Each student has six equally weighted scores.
+            #Each student has six equally weighted scores, which are then appended to the list as student name and final average
             final_average = score_total / 6
             students.append((student_name, final_average))
 
-    # Sort by the average at index 1, from highest to lowest.
+    #It begins sorting by the average at index 1 or after the name, from highest to lowest.
     students.sort(key=lambda student: student[1], reverse=True)
 
-    # Display each average with two decimal places.
+    #A formatted string is used to display each average with two decimal places.
     for student_name, final_average in students:
         print(f"{student_name} {final_average:.2f}")
 
