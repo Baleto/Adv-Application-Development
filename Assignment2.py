@@ -1,7 +1,7 @@
-# Program Name: Assignment2_10_students.py
+# Program Name: Assignment2.py
 # Course: IT3883/Section 01
 # Student Name: Benel Kawata
-# Assignment Number: Assignment 2
+# Assignment Number: 2
 # Due Date: 10/2/2026
 # Purpose: The purpose of this code is to calculate an average for a given list of 10 students
 # with their names and grades separated by a space and saved in a separate file
